@@ -19,6 +19,8 @@
 		02C0EBA827BBC3CC0089723E /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C0EBA627BBC3CC0089723E /* HomeTableViewCell.xib */; };
 		02C0EBAA27BBC9D60089723E /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0EBA927BBC9D60089723E /* MovieViewModel.swift */; };
 		02C0EBAC27BBD88B0089723E /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0EBAB27BBD88B0089723E /* MovieDetails.swift */; };
+		02C0EBAE27BBE2480089723E /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0EBAD27BBE2480089723E /* DependencyProvider.swift */; };
+		02C0EBB527BBE3170089723E /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0EBB427BBE3170089723E /* Assembly.swift */; };
 		02D21E4B27BAA0FB0041911D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D21E4A27BAA0FB0041911D /* AppDelegate.swift */; };
 		02D21E4D27BAA0FB0041911D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D21E4C27BAA0FB0041911D /* SceneDelegate.swift */; };
 		02D21E4F27BAA0FB0041911D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D21E4E27BAA0FB0041911D /* HomeViewController.swift */; };
@@ -41,6 +43,8 @@
 		02C0EBA627BBC3CC0089723E /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		02C0EBA927BBC9D60089723E /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		02C0EBAB27BBD88B0089723E /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
+		02C0EBAD27BBE2480089723E /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
+		02C0EBB427BBE3170089723E /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		02D21E4727BAA0FB0041911D /* DeverestMoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeverestMoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D21E4A27BAA0FB0041911D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02D21E4C27BAA0FB0041911D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,15 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		02C0EBAF27BBE24F0089723E /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				02C0EBAD27BBE2480089723E /* DependencyProvider.swift */,
+				02C0EBB427BBE3170089723E /* Assembly.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		02D21E3E27BAA0FB0041911D = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +163,7 @@
 				02C0EB9827BBA4B50089723E /* Service */,
 				02C0EB9727BBA4AB0089723E /* Network */,
 				02C0EBA027BBA7EE0089723E /* Utility */,
+				02C0EBAF27BBE24F0089723E /* Factory */,
 				02D21E5027BAA0FB0041911D /* Main.storyboard */,
 				02D21E5327BAA0FC0041911D /* Assets.xcassets */,
 				02D21E5527BAA0FC0041911D /* LaunchScreen.storyboard */,
@@ -291,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C0EBAE27BBE2480089723E /* DependencyProvider.swift in Sources */,
 				02D21E4F27BAA0FB0041911D /* HomeViewController.swift in Sources */,
 				02C0EBAC27BBD88B0089723E /* MovieDetails.swift in Sources */,
 				02C0EBA227BBB1DD0089723E /* MovieListResult.swift in Sources */,
@@ -299,6 +314,7 @@
 				02C0EB9C27BBA50B0089723E /* Movie.swift in Sources */,
 				02C0EB9027BBA38F0089723E /* AppCoordinator.swift in Sources */,
 				02C0EBA727BBC3CC0089723E /* HomeTableViewCell.swift in Sources */,
+				02C0EBB527BBE3170089723E /* Assembly.swift in Sources */,
 				02C0EB9227BBA46D0089723E /* HomePresenter.swift in Sources */,
 				02C0EB9627BBA4990089723E /* NetworkManager.swift in Sources */,
 				02C0EB9427BBA4900089723E /* MoviesService.swift in Sources */,

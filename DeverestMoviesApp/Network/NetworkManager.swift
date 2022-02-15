@@ -8,7 +8,12 @@
 import Foundation
 import Alamofire
 
-class NetworkManager {
+protocol NetworkManagerProtocol {
+    func fetchData(from url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void)
+    func fetchJson<T>(from url: URL, completionHandler: @escaping ((T)?, URLResponse?, Error?) -> Void) where T : Decodable
+}
+
+class NetworkManager: NetworkManagerProtocol {
     
     func fetchData(from url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         guard isConnectedToTheInternet() else {
@@ -26,23 +31,15 @@ class NetworkManager {
         task.resume()
     }
     
-    func loadData<T>(from url: URL, completionHandler: @escaping ((T)?, URLResponse?, Error?) -> Void) where T : Decodable {
-        guard isConnectedToTheInternet() else {
-            let connectionError = NSError(domain: "", code: 503, userInfo: ["Service Unavailable":""])
-            completionHandler(nil, nil, connectionError)
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, urlResponse, error in
+    func fetchJson<T>(from url: URL, completionHandler: @escaping ((T)?, URLResponse?, Error?) -> Void) where T : Decodable {
+        fetchData(from: url) { data, urlResponse, error in
             guard let data = data else {
                 completionHandler(nil, urlResponse, error)
                 return
             }
-
             let dataObject = try! JSONDecoder().decode(T.self, from: data)
             completionHandler(dataObject, urlResponse, nil)
         }
-        task.resume()
     }
     
     private func isConnectedToTheInternet() -> Bool {

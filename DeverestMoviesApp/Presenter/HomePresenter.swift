@@ -7,14 +7,19 @@
 
 import Foundation
 
-class HomePresenter {
+protocol HomePresenterProtocol {
+    var view: HomeViewDelegate! { get set }
+    func getMovies(with keyword: String)
+}
+
+class HomePresenter: HomePresenterProtocol {
     
-    var view: HomeViewController!
-    private let service = MoviesService()
+    var view: HomeViewDelegate!
+    var service: MoviesServiceProtocol!
     
     func getMovies(with keyword: String) {
         // Loading...
-        
+        view.showLoading()
         DispatchQueue.main.async {
             // Fetch movies...
             self.service.fetchMovieList(with: keyword) { movies, error in
@@ -22,10 +27,11 @@ class HomePresenter {
                     print("Fetching failed")
                     return
                 }
-                // Show result
                 let movieViewModel = movies.map { MovieViewModel(movie: $0) }
-                print(movieViewModel)
-                self.view.moviesArray = movieViewModel
+                
+                DispatchQueue.main.async {
+                    self.view.showResult(with: movieViewModel)
+                }
             }
         }
     }

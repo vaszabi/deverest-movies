@@ -24,16 +24,16 @@ class HomeTableViewCell: UITableViewCell {
     func setData(with viewModel: MovieViewModel) {
         self.titleLabel.text = viewModel.title
         DispatchQueue.main.async {
-            viewModel.getBudget(completionHandler: { budget in
+            viewModel.getBudget(completionHandler: {[weak self] budget in
                 DispatchQueue.main.async {
-                    self.budgetLabel.text = "Budget: \(budget)"
+                    self?.budgetLabel.text = "Budget: \(budget)"
                 }
             })
         }
         DispatchQueue.main.async {
-            viewModel.getPosterImg { poster in
+            viewModel.getPosterImg {[weak self] poster in
                 DispatchQueue.main.async {
-                    self.posterImg.image = poster
+                    self?.posterImg.image = poster
                 }
             }
         }

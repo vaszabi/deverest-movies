@@ -7,5 +7,7 @@ target 'DeverestMoviesApp' do
 
   # Pods for DeverestMoviesApp
   pod 'Alamofire'
+  pod 'Swinject'
+  pod 'SwinjectStoryboard'
 
 end

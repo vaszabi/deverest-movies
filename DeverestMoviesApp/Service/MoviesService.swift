@@ -7,16 +7,22 @@
 
 import Foundation
 
-class MoviesService {
+protocol MoviesServiceProtocol {
+    func fetchMovieList(with keyword: String, completionHandler: @escaping ([Movie]?, Error?) -> Void)
+    func fetchPosterImg(path: String, completionHandler: @escaping (Data?, Error?) -> Void)
+    func fetchMovieDetails(movieId: Int, completionHandler: @escaping (MovieDetails?, Error?) -> Void)
+}
+
+class MoviesService: MoviesServiceProtocol {
     
-    var networkManager = NetworkManager()
+    var networkManager: NetworkManagerProtocol! = NetworkManager()
     
     static let shared = MoviesService()
     
     func fetchMovieList(with keyword: String, completionHandler: @escaping ([Movie]?, Error?) -> Void) {
         let url = buildSearchRequestURL(with: keyword)
         
-        networkManager.loadData(from: url) { (fetchedMovieResult: MovieListResult?, urlResponse, error) in
+        networkManager.fetchJson(from: url) { (fetchedMovieResult: MovieListResult?, urlResponse, error) in
             if let error = error {
                 completionHandler(nil, error)
                 return
@@ -45,7 +51,7 @@ class MoviesService {
     
     func fetchMovieDetails(movieId: Int, completionHandler: @escaping (MovieDetails?, Error?) -> Void) {
         let url = buildDetailsRequestURL(movieId: movieId)
-        networkManager.loadData(from: url) { (movieDetails: MovieDetails?, response, error) in
+        networkManager.fetchJson(from: url) { (movieDetails: MovieDetails?, response, error) in
             guard let movieDetails = movieDetails,
             error == nil else {
                 completionHandler(nil, error)
@@ -55,6 +61,7 @@ class MoviesService {
         }
     }
     
+    //MARK: Private methods
     private func buildDetailsRequestURL(movieId: Int) -> URL {
         var urlComps = URLComponents(string: Configuration.baseURL + Configuration.detailUrl + "\(movieId)")!
         let queryItems = [URLQueryItem(name: "api_key", value: Configuration.apiKey)]

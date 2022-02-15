@@ -7,6 +7,12 @@
 
 import UIKit
 
+protocol HomeViewDelegate {
+    func showLoading()
+    func stopLoading()
+    func showResult(with result: [MovieViewModel])
+}
+
 class HomeViewController: UIViewController {
 
     //MARK: Outlets
@@ -19,7 +25,7 @@ class HomeViewController: UIViewController {
     }
     @IBOutlet weak var tableView: UITableView!
     
-    var moviesArray: [MovieViewModel] = [] {
+    private var moviesArray: [MovieViewModel] = [] {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -27,14 +33,13 @@ class HomeViewController: UIViewController {
         }
     }
     
-    var presenter = HomePresenter()
+    var presenter: HomePresenterProtocol!
     
     //MARK: Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.view = self
         setupViews()
-        
     }
     
     //MARK: Private methods
@@ -45,6 +50,23 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
     }
+}
+
+extension HomeViewController: HomeViewDelegate {
+    
+    func showLoading() {
+        print("Loading...")
+    }
+    
+    func stopLoading() {
+        print("Done.")
+    }
+    
+    func showResult(with result: [MovieViewModel]) {
+        self.stopLoading()
+        self.moviesArray = result
+    }
+    
 }
 
 //MARK: TextFieldDelegate conform
