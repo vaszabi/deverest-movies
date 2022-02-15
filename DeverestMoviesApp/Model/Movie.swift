@@ -12,7 +12,7 @@ struct Movie : Codable {
     let isAdult: Bool
     let posterPath: String?
     let overview: String
-    let releaseDate: String
+    let releaseDate: String?
     let genreIds: [Int]
     let id: Int
     let originalTitle: String

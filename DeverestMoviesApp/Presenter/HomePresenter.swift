@@ -12,7 +12,7 @@ class HomePresenter {
     var view: HomeViewController!
     private let service = MoviesService()
     
-    func getMovies(with keyword: String = "father") {
+    func getMovies(with keyword: String) {
         // Loading...
         
         DispatchQueue.main.async {
@@ -23,7 +23,9 @@ class HomePresenter {
                     return
                 }
                 // Show result
-                print(movies)
+                let movieViewModel = movies.map { MovieViewModel(movie: $0) }
+                print(movieViewModel)
+                self.view.moviesArray = movieViewModel
             }
         }
     }

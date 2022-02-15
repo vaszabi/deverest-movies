@@ -15,6 +15,9 @@
 		02C0EB9C27BBA50B0089723E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0EB9B27BBA50B0089723E /* Movie.swift */; };
 		02C0EB9F27BBA7E70089723E /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0EB9E27BBA7E70089723E /* UITextField+.swift */; };
 		02C0EBA227BBB1DD0089723E /* MovieListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0EBA127BBB1DD0089723E /* MovieListResult.swift */; };
+		02C0EBA727BBC3CC0089723E /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0EBA527BBC3CC0089723E /* HomeTableViewCell.swift */; };
+		02C0EBA827BBC3CC0089723E /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C0EBA627BBC3CC0089723E /* HomeTableViewCell.xib */; };
+		02C0EBAA27BBC9D60089723E /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0EBA927BBC9D60089723E /* MovieViewModel.swift */; };
 		02D21E4B27BAA0FB0041911D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D21E4A27BAA0FB0041911D /* AppDelegate.swift */; };
 		02D21E4D27BAA0FB0041911D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D21E4C27BAA0FB0041911D /* SceneDelegate.swift */; };
 		02D21E4F27BAA0FB0041911D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D21E4E27BAA0FB0041911D /* HomeViewController.swift */; };
@@ -33,6 +36,9 @@
 		02C0EB9B27BBA50B0089723E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		02C0EB9E27BBA7E70089723E /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		02C0EBA127BBB1DD0089723E /* MovieListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListResult.swift; sourceTree = "<group>"; };
+		02C0EBA527BBC3CC0089723E /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		02C0EBA627BBC3CC0089723E /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		02C0EBA927BBC9D60089723E /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		02D21E4727BAA0FB0041911D /* DeverestMoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeverestMoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D21E4A27BAA0FB0041911D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02D21E4C27BAA0FB0041911D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				02D21E4E27BAA0FB0041911D /* HomeViewController.swift */,
+				02C0EBA927BBC9D60089723E /* MovieViewModel.swift */,
+				02C0EBA527BBC3CC0089723E /* HomeTableViewCell.swift */,
+				02C0EBA627BBC3CC0089723E /* HomeTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,7 +169,6 @@
 				E7A2415739E0CC2E0C0B62F3 /* Pods-DeverestMoviesApp.debug.xcconfig */,
 				8A7BB519B8020CC455CD2B31 /* Pods-DeverestMoviesApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -226,6 +234,7 @@
 			files = (
 				02D21E5727BAA0FC0041911D /* LaunchScreen.storyboard in Resources */,
 				02D21E5427BAA0FC0041911D /* Assets.xcassets in Resources */,
+				02C0EBA827BBC3CC0089723E /* HomeTableViewCell.xib in Resources */,
 				02D21E5227BAA0FB0041911D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,9 +294,11 @@
 				02D21E4B27BAA0FB0041911D /* AppDelegate.swift in Sources */,
 				02C0EB9C27BBA50B0089723E /* Movie.swift in Sources */,
 				02C0EB9027BBA38F0089723E /* AppCoordinator.swift in Sources */,
+				02C0EBA727BBC3CC0089723E /* HomeTableViewCell.swift in Sources */,
 				02C0EB9227BBA46D0089723E /* HomePresenter.swift in Sources */,
 				02C0EB9627BBA4990089723E /* NetworkManager.swift in Sources */,
 				02C0EB9427BBA4900089723E /* MoviesService.swift in Sources */,
+				02C0EBAA27BBC9D60089723E /* MovieViewModel.swift in Sources */,
 				02C0EB8E27BBA2610089723E /* Configuration.swift in Sources */,
 				02D21E4D27BAA0FB0041911D /* SceneDelegate.swift in Sources */,
 			);

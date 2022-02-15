@@ -30,19 +30,42 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sp1-wf-THj">
+                                <rect key="frame" x="15" y="150" width="384" height="712"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" id="TUL-Il-AJm" customClass="HomeTableViewCell" customModule="DeverestMoviesApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="384" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TUL-Il-AJm" id="PZs-26-YgR">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="fvp-jK-Ynh"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uUe-Px-7nL"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZgF-qG-Bj4" secondAttribute="trailing" constant="15" id="0l0-Lg-PUb"/>
+                            <constraint firstItem="sp1-wf-THj" firstAttribute="top" secondItem="ZgF-qG-Bj4" secondAttribute="bottom" constant="15" id="4sW-b3-jmP"/>
                             <constraint firstItem="Qtg-jQ-hVd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ESj-mw-ytG"/>
+                            <constraint firstItem="sp1-wf-THj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="N4w-Iv-9Zr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sp1-wf-THj" secondAttribute="trailing" constant="15" id="Qyu-Z0-hNH"/>
                             <constraint firstItem="ZgF-qG-Bj4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="qbq-c8-gEa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sp1-wf-THj" secondAttribute="bottom" id="rBo-Al-Jvj"/>
                             <constraint firstItem="ZgF-qG-Bj4" firstAttribute="top" secondItem="Qtg-jQ-hVd" secondAttribute="bottom" constant="15" id="rPI-7Z-Xnt"/>
                             <constraint firstItem="Qtg-jQ-hVd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="v7k-b1-aps"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="searchTextField" destination="ZgF-qG-Bj4" id="6lq-xr-pwe"/>
+                        <outlet property="tableView" destination="sp1-wf-THj" id="HqJ-rl-KKn"/>
                         <outlet property="titleLabel" destination="Qtg-jQ-hVd" id="seM-DX-WAP"/>
                     </connections>
                 </viewController>
@@ -52,6 +75,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
