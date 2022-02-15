@@ -47,6 +47,7 @@ class HomeViewController: UIViewController {
     }
 }
 
+//MARK: TextFieldDelegate conform
 extension HomeViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -62,6 +63,7 @@ extension HomeViewController: UITextFieldDelegate {
     }
 }
 
+//MARK: TableView conform
 extension HomeViewController: UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

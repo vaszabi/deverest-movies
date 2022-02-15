@@ -10,6 +10,22 @@ import Alamofire
 
 class NetworkManager {
     
+    func fetchData(from url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        guard isConnectedToTheInternet() else {
+            let connectionError = NSError(domain: "", code: 503, userInfo: ["Service Unavailable":""])
+            completionHandler(nil, nil, connectionError)
+            return
+        }
+        let task = URLSession.shared.dataTask(with: url) { data, urlResponse, error in
+            guard let data = data else {
+                completionHandler(nil, urlResponse, error)
+                return
+            }
+            completionHandler(data, urlResponse, nil)
+        }
+        task.resume()
+    }
+    
     func loadData<T>(from url: URL, completionHandler: @escaping ((T)?, URLResponse?, Error?) -> Void) where T : Decodable {
         guard isConnectedToTheInternet() else {
             let connectionError = NSError(domain: "", code: 503, userInfo: ["Service Unavailable":""])
