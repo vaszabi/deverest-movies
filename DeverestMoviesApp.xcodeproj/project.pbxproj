@@ -13,12 +13,15 @@
 		02C0EB9427BBA4900089723E /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0EB9327BBA4900089723E /* MoviesService.swift */; };
 		02C0EB9627BBA4990089723E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0EB9527BBA4990089723E /* NetworkManager.swift */; };
 		02C0EB9C27BBA50B0089723E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0EB9B27BBA50B0089723E /* Movie.swift */; };
+		02C0EB9F27BBA7E70089723E /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0EB9E27BBA7E70089723E /* UITextField+.swift */; };
+		02C0EBA227BBB1DD0089723E /* MovieListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0EBA127BBB1DD0089723E /* MovieListResult.swift */; };
 		02D21E4B27BAA0FB0041911D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D21E4A27BAA0FB0041911D /* AppDelegate.swift */; };
 		02D21E4D27BAA0FB0041911D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D21E4C27BAA0FB0041911D /* SceneDelegate.swift */; };
 		02D21E4F27BAA0FB0041911D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D21E4E27BAA0FB0041911D /* HomeViewController.swift */; };
 		02D21E5227BAA0FB0041911D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D21E5027BAA0FB0041911D /* Main.storyboard */; };
 		02D21E5427BAA0FC0041911D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D21E5327BAA0FC0041911D /* Assets.xcassets */; };
 		02D21E5727BAA0FC0041911D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D21E5527BAA0FC0041911D /* LaunchScreen.storyboard */; };
+		1E352F294361698F2000165E /* Pods_DeverestMoviesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1E408EF64B7B54FFDDC8C9 /* Pods_DeverestMoviesApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,8 @@
 		02C0EB9327BBA4900089723E /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
 		02C0EB9527BBA4990089723E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		02C0EB9B27BBA50B0089723E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		02C0EB9E27BBA7E70089723E /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		02C0EBA127BBB1DD0089723E /* MovieListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListResult.swift; sourceTree = "<group>"; };
 		02D21E4727BAA0FB0041911D /* DeverestMoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeverestMoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D21E4A27BAA0FB0041911D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02D21E4C27BAA0FB0041911D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +41,9 @@
 		02D21E5327BAA0FC0041911D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02D21E5627BAA0FC0041911D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02D21E5827BAA0FC0041911D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F1E408EF64B7B54FFDDC8C9 /* Pods_DeverestMoviesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeverestMoviesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A7BB519B8020CC455CD2B31 /* Pods-DeverestMoviesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeverestMoviesApp.release.xcconfig"; path = "Target Support Files/Pods-DeverestMoviesApp/Pods-DeverestMoviesApp.release.xcconfig"; sourceTree = "<group>"; };
+		E7A2415739E0CC2E0C0B62F3 /* Pods-DeverestMoviesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeverestMoviesApp.debug.xcconfig"; path = "Target Support Files/Pods-DeverestMoviesApp/Pods-DeverestMoviesApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E352F294361698F2000165E /* Pods_DeverestMoviesApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,8 +94,17 @@
 			isa = PBXGroup;
 			children = (
 				02C0EB9B27BBA50B0089723E /* Movie.swift */,
+				02C0EBA127BBB1DD0089723E /* MovieListResult.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		02C0EBA027BBA7EE0089723E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				02C0EB9E27BBA7E70089723E /* UITextField+.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		02D21E3E27BAA0FB0041911D = {
@@ -94,6 +112,8 @@
 			children = (
 				02D21E4927BAA0FB0041911D /* DeverestMoviesApp */,
 				02D21E4827BAA0FB0041911D /* Products */,
+				C46DBE818523D7AFCBA40604 /* Pods */,
+				A1060497066113C15ABA4266 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,18 +131,37 @@
 				02D21E4A27BAA0FB0041911D /* AppDelegate.swift */,
 				02D21E4C27BAA0FB0041911D /* SceneDelegate.swift */,
 				02C0EB8F27BBA38F0089723E /* AppCoordinator.swift */,
+				02C0EB8D27BBA2610089723E /* Configuration.swift */,
 				02C0EB9D27BBA5450089723E /* Model */,
 				02C0EB9A27BBA4C30089723E /* View */,
 				02C0EB9927BBA4BC0089723E /* Presenter */,
 				02C0EB9827BBA4B50089723E /* Service */,
 				02C0EB9727BBA4AB0089723E /* Network */,
-				02C0EB8D27BBA2610089723E /* Configuration.swift */,
+				02C0EBA027BBA7EE0089723E /* Utility */,
 				02D21E5027BAA0FB0041911D /* Main.storyboard */,
 				02D21E5327BAA0FC0041911D /* Assets.xcassets */,
 				02D21E5527BAA0FC0041911D /* LaunchScreen.storyboard */,
 				02D21E5827BAA0FC0041911D /* Info.plist */,
 			);
 			path = DeverestMoviesApp;
+			sourceTree = "<group>";
+		};
+		A1060497066113C15ABA4266 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F1E408EF64B7B54FFDDC8C9 /* Pods_DeverestMoviesApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C46DBE818523D7AFCBA40604 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7A2415739E0CC2E0C0B62F3 /* Pods-DeverestMoviesApp.debug.xcconfig */,
+				8A7BB519B8020CC455CD2B31 /* Pods-DeverestMoviesApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02D21E5B27BAA0FC0041911D /* Build configuration list for PBXNativeTarget "DeverestMoviesApp" */;
 			buildPhases = (
+				B6AC063CB1059921907692E6 /* [CP] Check Pods Manifest.lock */,
 				02D21E4327BAA0FB0041911D /* Sources */,
 				02D21E4427BAA0FB0041911D /* Frameworks */,
 				02D21E4527BAA0FB0041911D /* Resources */,
+				802CA7698C0E2BDD8FDDD0DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,12 +232,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		802CA7698C0E2BDD8FDDD0DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeverestMoviesApp/Pods-DeverestMoviesApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeverestMoviesApp/Pods-DeverestMoviesApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DeverestMoviesApp/Pods-DeverestMoviesApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6AC063CB1059921907692E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeverestMoviesApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		02D21E4327BAA0FB0041911D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				02D21E4F27BAA0FB0041911D /* HomeViewController.swift in Sources */,
+				02C0EBA227BBB1DD0089723E /* MovieListResult.swift in Sources */,
+				02C0EB9F27BBA7E70089723E /* UITextField+.swift in Sources */,
 				02D21E4B27BAA0FB0041911D /* AppDelegate.swift in Sources */,
 				02C0EB9C27BBA50B0089723E /* Movie.swift in Sources */,
 				02C0EB9027BBA38F0089723E /* AppCoordinator.swift in Sources */,
@@ -348,6 +433,7 @@
 		};
 		02D21E5C27BAA0FC0041911D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7A2415739E0CC2E0C0B62F3 /* Pods-DeverestMoviesApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -376,6 +462,7 @@
 		};
 		02D21E5D27BAA0FC0041911D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A7BB519B8020CC455CD2B31 /* Pods-DeverestMoviesApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

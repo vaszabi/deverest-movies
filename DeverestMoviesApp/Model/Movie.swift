@@ -17,7 +17,7 @@ struct Movie : Codable {
     let id: Int
     let originalTitle: String
     let originalLanguage: String
-    let backdropPath: String
+    let backdropPath: String?
     let popularity: Double
     let voteCount: Int
     let isVideo: Bool
