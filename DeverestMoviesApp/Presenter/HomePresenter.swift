@@ -18,10 +18,9 @@ class HomePresenter: HomePresenterProtocol {
     var service: MoviesServiceProtocol!
     
     func getMovies(with keyword: String) {
-        // Loading...
         view.showLoading()
+        
         DispatchQueue.main.async {
-            // Fetch movies...
             self.service.fetchMovieList(with: keyword) { movies, error in
                 guard let movies = movies else {
                     print("Fetching failed")

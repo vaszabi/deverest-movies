@@ -25,6 +25,12 @@ class HomeViewController: UIViewController {
     }
     @IBOutlet weak var tableView: UITableView!
     
+    private let activityIndicator : UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .large)
+        indicator.hidesWhenStopped = true
+        return indicator
+    }()
+    
     private var moviesArray: [MovieViewModel] = [] {
         didSet {
             DispatchQueue.main.async {
@@ -47,24 +53,29 @@ class HomeViewController: UIViewController {
         titleLabel.font = UIFont(name: "Helvetica-Bold", size: 25.0)
         titleLabel.text = "Movies"
         searchTextField.delegate = self
+        tableView.isHidden = true
         tableView.delegate = self
         tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
+        activityIndicator.center = self.view.center
+        self.view.addSubview(activityIndicator)
     }
 }
 
+//MARK: HomeViewDelegate conform
 extension HomeViewController: HomeViewDelegate {
     
     func showLoading() {
-        print("Loading...")
+        activityIndicator.startAnimating()
     }
     
     func stopLoading() {
-        print("Done.")
+        activityIndicator.stopAnimating()
     }
     
     func showResult(with result: [MovieViewModel]) {
         self.stopLoading()
         self.moviesArray = result
+        tableView.isHidden = false
     }
     
 }

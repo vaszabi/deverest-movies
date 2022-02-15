@@ -28,7 +28,6 @@ struct MovieViewModel {
     }
     
     func getPosterImg(completionHandler: @escaping (UIImage?) -> Void) {
-        //TODO: Implement img fetch
         guard let path = self.posterPath else { return }
         MoviesService.shared.fetchPosterImg(path: path) { data, error in
             guard let data = data else { return }
